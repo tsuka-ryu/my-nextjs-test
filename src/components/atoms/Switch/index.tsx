@@ -7,12 +7,18 @@ type Props = {
 } & Omit<React.ComponentPropsWithoutRef<"input">, "type" | "role">;
 
 export const Switch = forwardRef<HTMLInputElement, Props>(function Switch(
-  { className, ...props },
+  { className, checked, ...props },
   ref
 ) {
   return (
     <span className={clsx(className, styles.module)}>
-      <input {...props} ref={ref} type="checkbox" role="switch" />
+      <input
+        {...props}
+        ref={ref}
+        type="checkbox"
+        role="switch"
+        aria-checked={checked}
+      />
       <span />
     </span>
   );

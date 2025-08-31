@@ -8,7 +8,27 @@ export default defineConfig({
       enabled: true,
       provider: "playwright",
       // https://vitest.dev/guide/browser/playwright
-      instances: [],
+      instances: [
+        {
+          browser: "chromium",
+          headless: true,
+        },
+      ],
+    },
+    coverage: {
+      exclude: [
+        "next.config.ts",
+        "postcss.config.mjs",
+        "tailwind.config.*",
+        "src/app/layout.tsx",
+        "**/*.d.ts",
+        "node_modules/**",
+        "coverage/**",
+        "public/**",
+        "**/*.config.*",
+        ".next/**",
+        "out/**",
+      ],
     },
   },
 });

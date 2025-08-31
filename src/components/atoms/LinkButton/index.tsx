@@ -17,14 +17,14 @@ export const LinkButton = ({
   children,
   ...props
 }: Props) => (
-  <Link {...props} href={href} legacyBehavior>
-    <a
-      className={clsx(className, styles.module)}
-      aria-disabled={disabled}
-      data-theme={theme}
-      data-variant={variant}
-    >
-      {children}
-    </a>
+  <Link
+    {...props}
+    className={clsx(className, styles.module)}
+    aria-disabled={disabled}
+    data-theme={theme}
+    data-variant={variant}
+    href={href}
+  >
+    {children}
   </Link>
 );

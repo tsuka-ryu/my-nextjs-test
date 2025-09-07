@@ -5,13 +5,11 @@ import styles from "./styles.module.css";
 export const Heading = () => {
   return (
     <h1 className={styles.heading}>
-      <Link href={`/`} legacyBehavior>
-        <a>
-          <span className={styles.icon}>
-            <Pen />
-          </span>
-          Tech Posts
-        </a>
+      <Link href={`/`}>
+        <span className={styles.icon}>
+          <Pen />
+        </span>
+        Tech Posts
       </Link>
     </h1>
   );

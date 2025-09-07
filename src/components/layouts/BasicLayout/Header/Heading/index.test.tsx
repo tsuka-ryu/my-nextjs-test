@@ -16,9 +16,8 @@ test("[role=heading]", async () => {
     .toBeInTheDocument();
 });
 
-// test("クリックするとTOPへ遷移する", async () => {
-//   mockRouter.setCurrentUrl("/posts?page=1");
-//   const screen = render(<Heading />);
-//   await screen.getByRole("link").click();
-//   expect(mockRouter).toMatchObject({ pathname: "/" });
-// });
+test("リンクが正しいURLを指している", async () => {
+  const screen = render(<Heading />);
+  const link = screen.getByRole("link");
+  await expect.element(link).toHaveAttribute("href", "/");
+});

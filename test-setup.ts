@@ -18,3 +18,20 @@ vi.mock("next/link", () => {
     default: MockedLink,
   };
 });
+
+// Mock Next.js router
+vi.mock("next/router", () => ({
+  useRouter: () => ({
+    push: vi.fn(),
+    replace: vi.fn(),
+    back: vi.fn(),
+    forward: vi.fn(),
+    refresh: vi.fn(),
+    prefetch: vi.fn(),
+    pathname: "/",
+    route: "/",
+    query: {},
+    asPath: "/",
+    isReady: true,
+  }),
+}));

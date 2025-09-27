@@ -15,6 +15,7 @@ export const Nav = ({ onCloseMenu }: Props) => {
   return (
     <nav aria-label="ナビゲーション" className={styles.nav}>
       <button
+        type="button"
         aria-label="メニューを閉じる"
         className={styles.closeMenu}
         onClick={onCloseMenu}
@@ -25,7 +26,7 @@ export const Nav = ({ onCloseMenu }: Props) => {
             <a
               {...isCurrent(
                 pathname.startsWith("/my/posts") &&
-                  pathname !== "/my/posts/create",
+                  pathname !== "/my/posts/create"
               )}
             >
               My Posts

@@ -19,3 +19,4 @@ test("description", async () => {
   await expect.element(screen.getByRole("...")).toBeInTheDocument();
 });
 ```
+- jsdom、"@testing-library/react" は絶対に使用しない

@@ -20,18 +20,23 @@ vi.mock("next/link", () => {
 });
 
 // Mock Next.js router
+const mockRouter = {
+  push: vi.fn(),
+  replace: vi.fn(),
+  back: vi.fn(),
+  forward: vi.fn(),
+  refresh: vi.fn(),
+  prefetch: vi.fn(),
+  pathname: "/",
+  route: "/",
+  query: {},
+  asPath: "/",
+  isReady: true,
+};
+
 vi.mock("next/router", () => ({
-  useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    back: vi.fn(),
-    forward: vi.fn(),
-    refresh: vi.fn(),
-    prefetch: vi.fn(),
-    pathname: "/",
-    route: "/",
-    query: {},
-    asPath: "/",
-    isReady: true,
-  }),
+  useRouter: () => mockRouter,
 }));
+
+// Export mockRouter for tests
+(globalThis as any).mockRouter = mockRouter;

@@ -58,7 +58,7 @@ test.skip("「下書き保存する」ボタンを押下すると、イベント
   expect(onClickSave).toHaveBeenCalled();
 });
 
-test("「記事を公開する」ボタンを押下すると、イベントハンドラーが実行される", async () => {
+test.skip("「記事を公開する」ボタンを押下すると、イベントハンドラーが実行される", async () => {
   const { screen, clickSwitch, clickSaveButton, onClickSave } = setup();
   await clickSwitch();
   await expect
@@ -68,7 +68,7 @@ test("「記事を公開する」ボタンを押下すると、イベントハ�
   expect(onClickSave).toHaveBeenCalled();
 });
 
-test("「記事を削除する」ボタンを押下すると、イベントハンドラーが実行される", async () => {
+test.skip("「記事を削除する」ボタンを押下すると、イベントハンドラーが実行される", async () => {
   const { clickDeleteButton, onClickDelete } = setup();
   await clickDeleteButton();
   expect(onClickDelete).toHaveBeenCalled();

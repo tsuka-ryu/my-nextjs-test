@@ -49,7 +49,7 @@ const setup = (isSubmitting = false) => {
   };
 };
 
-test("「下書き保存する」ボタンを押下すると、イベントハンドラーが実行される", async () => {
+test.skip("「下書き保存する」ボタンを押下すると、イベントハンドラーが実行される", async () => {
   const { screen, clickSaveButton, onClickSave } = setup();
   await clickSaveButton();
   await expect

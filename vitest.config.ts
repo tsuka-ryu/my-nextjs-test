@@ -35,6 +35,7 @@ export default defineConfig({
         "**/*.config.*",
         ".next/**",
         "out/**",
+        "**/__mock__/**",
       ],
     },
   },

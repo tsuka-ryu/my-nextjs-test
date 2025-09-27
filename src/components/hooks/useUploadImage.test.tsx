@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { expect, test, vi } from "vitest";
 import { render } from "vitest-browser-react";
 import type { UploadImageData } from "@/services/client/UploadImage";
-import { selectImageFile } from "@/tests/vitest";
+import { selectImageFile } from "@/tests/client";
 import { useUploadImage } from "./useUploadImage";
 
 vi.mock("@/services/client/UploadImage", () => ({

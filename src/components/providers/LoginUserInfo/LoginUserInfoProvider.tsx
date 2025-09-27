@@ -19,8 +19,7 @@ export const LoginUserInfoProvider = ({
   const [profile, updateProfile] = useAsyncFn(getMyProfile, [], defaultState);
   useEffect(() => {
     updateProfile();
-    // eslint-disable-next-line
-  }, []);
+  }, [updateProfile]);
   return (
     <LoginUserInfoStateContext.Provider value={profile}>
       <LoginUserInfoActionContext.Provider value={{ updateProfile }}>

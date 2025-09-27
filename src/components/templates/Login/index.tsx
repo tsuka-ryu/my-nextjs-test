@@ -1,9 +1,9 @@
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/atoms/Button";
 import { TextboxWithError } from "@/components/molecules/TextboxWithError";
 import { useToastAction } from "@/components/providers/ToastProvider";
-import { Input, InputSchema, postLogin } from "@/services/client/Login";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { type Input, InputSchema, postLogin } from "@/services/client/Login";
 import styles from "./styles.module.css";
 
 const defaultValues: Input = {

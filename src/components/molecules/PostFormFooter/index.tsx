@@ -1,8 +1,8 @@
+import { type Control, type UseFormRegister, useWatch } from "react-hook-form";
 import { Button } from "@/components/atoms/Button";
 import { Switch } from "@/components/atoms/Switch";
 import { ContentFooter } from "@/components/molecules/ContentFooter";
-import { PutInput } from "@/pages/api/my/posts/[postId]";
-import { Control, UseFormRegister, useWatch } from "react-hook-form";
+import type { PutInput } from "@/pages/api/my/posts/[postId]";
 import styles from "./styles.module.css";
 
 const SaveButton = ({

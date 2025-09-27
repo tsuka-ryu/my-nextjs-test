@@ -32,7 +32,7 @@ test("[role='button'][aria-disabled='true']", async () => {
   const screen = render(
     <LinkButton href="#" disabled>
       test
-    </LinkButton>
+    </LinkButton>,
   );
   await expect
     .element(screen.getByRole("link"))

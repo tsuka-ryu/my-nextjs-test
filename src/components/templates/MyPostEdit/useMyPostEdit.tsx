@@ -1,9 +1,9 @@
-import { useAlertDialogAction } from "@/components/organisms/AlertDialog/hooks";
-import { useToastAction } from "@/components/providers/ToastProvider";
-import * as ApiMyPost from "@/pages/api/my/posts/[postId]";
-import { deleteMyPost, updateMyPost } from "@/services/client/MyPost";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { useAlertDialogAction } from "@/components/organisms/AlertDialog/hooks";
+import { useToastAction } from "@/components/providers/ToastProvider";
+import type * as ApiMyPost from "@/pages/api/my/posts/[postId]";
+import { deleteMyPost, updateMyPost } from "@/services/client/MyPost";
 
 export function useMyPostEdit({ id }: { id: number }) {
   const router = useRouter();

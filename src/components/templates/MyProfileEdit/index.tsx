@@ -4,7 +4,7 @@ import { ContentFooter } from "@/components/molecules/ContentFooter";
 import { ContentHeader } from "@/components/molecules/ContentHeader";
 import { TextareaWithInfo } from "@/components/molecules/TextareaWithInfo";
 import { TextboxWithInfo } from "@/components/molecules/TextboxWithInfo";
-import { GetMyProfileEditReturn } from "@/services/server/MyProfileEdit";
+import type { GetMyProfileEditReturn } from "@/services/server/MyProfileEdit";
 import { Avatar } from "./Avatar";
 import styles from "./styles.module.css";
 import { useMyProfileEdit } from "./useMyProfileEdit";

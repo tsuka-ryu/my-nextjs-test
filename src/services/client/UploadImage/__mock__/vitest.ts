@@ -11,7 +11,7 @@ vi.mock("../fetcher", () => ({
 export function mockUploadImage(status?: ErrorStatus) {
   if (status && status > 299) {
     return mockUploadImageFn.mockRejectedValueOnce(
-      new HttpError(status).serialize()
+      new HttpError(status).serialize(),
     );
   }
 

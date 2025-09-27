@@ -1,7 +1,7 @@
 import { Button } from "@/components/atoms/Button";
 import { useToastAction } from "@/components/providers/ToastProvider";
 import { postLogout } from "@/services/client/Logout";
-import { GetMyProfileReturn } from "@/services/server/MyProfile";
+import type { GetMyProfileReturn } from "@/services/server/MyProfile";
 import styles from "./styles.module.css";
 
 type Props = GetMyProfileReturn;

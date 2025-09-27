@@ -1,6 +1,6 @@
 import { PaginationInfo } from "@/components/atoms/PaginationInfo";
 import { Pagination } from "@/components/molecules/Pagination";
-import { GetMyPostsReturn } from "@/services/server/MyPosts";
+import type { GetMyPostsReturn } from "@/services/server/MyPosts";
 import { Header } from "./Header";
 import { NoItems } from "./NoItems";
 import { PostItem } from "./PostItem";

@@ -1,10 +1,10 @@
-import { useLoginUserInfoAction } from "@/components/providers/LoginUserInfo";
-import { useToastAction } from "@/components/providers/ToastProvider";
-import { PutInput } from "@/pages/api/my/profile/edit";
-import { updateMyProfileEdit } from "@/services/client/MyProfileEdit";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import { Props } from ".";
+import { useLoginUserInfoAction } from "@/components/providers/LoginUserInfo";
+import { useToastAction } from "@/components/providers/ToastProvider";
+import type { PutInput } from "@/pages/api/my/profile/edit";
+import { updateMyProfileEdit } from "@/services/client/MyProfileEdit";
+import type { Props } from ".";
 
 export function useMyProfileEdit({ profile }: Props) {
   const router = useRouter();

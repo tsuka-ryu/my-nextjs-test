@@ -1,10 +1,10 @@
-import { useToastAction } from "@/components/providers/ToastProvider";
-import { parseAsPositiveInt } from "@/lib/util";
-import { postLike } from "@/services/client/Like";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Props } from "./";
+import { useToastAction } from "@/components/providers/ToastProvider";
+import { parseAsPositiveInt } from "@/lib/util";
+import { postLike } from "@/services/client/Like";
+import type { Props } from "./";
 
 export const useLikeButton = ({
   likeCount,

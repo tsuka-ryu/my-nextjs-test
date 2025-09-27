@@ -1,6 +1,6 @@
-import { GetPostsReturn } from "@/services/server/Posts";
 import Link from "next/link";
 import { useId } from "react";
+import type { GetPostsReturn } from "@/services/server/Posts";
 import Like from "./assets/like.svg";
 import styles from "./styles.module.css";
 

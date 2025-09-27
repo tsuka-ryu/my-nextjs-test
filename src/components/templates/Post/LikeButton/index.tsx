@@ -18,7 +18,7 @@ export const LikeButton = (props: Props) => {
         className={clsx(
           styles.button,
           isLiked && styles.liked,
-          props.isMyPost && styles.myPost
+          props.isMyPost && styles.myPost,
         )}
         disabled={isDisabled}
       >

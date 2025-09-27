@@ -1,5 +1,5 @@
 import { LinkButton } from "@/components/atoms/LinkButton";
-import { GetMyProfileReturn } from "@/services/server/MyProfile";
+import type { GetMyProfileReturn } from "@/services/server/MyProfile";
 import { Accounts } from "./Accounts";
 import Star from "./assets/star.svg";
 import styles from "./styles.module.css";

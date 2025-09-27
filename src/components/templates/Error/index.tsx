@@ -1,4 +1,4 @@
-import { Err } from "@/lib/error";
+import type { Err } from "@/lib/error";
 import Caution from "./assets/caution.svg";
 import styles from "./styles.module.css";
 

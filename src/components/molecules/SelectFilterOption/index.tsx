@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { ComponentProps, useId } from "react";
+import { type ComponentProps, useId } from "react";
 import { Combobox } from "../Combobox";
 import styles from "./styles.module.css";
 

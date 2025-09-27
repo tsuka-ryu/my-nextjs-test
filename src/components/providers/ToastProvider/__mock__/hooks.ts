@@ -1,16 +1,22 @@
-import * as Hooks from "../hooks";
+import { vi } from "vitest";
 
-jest.mock("../hooks", () => ({
-  __esModule: true,
-  ...jest.requireActual("../hooks"),
+const mockShowToast = vi.fn();
+const mockHideToast = vi.fn();
+
+vi.mock("../hooks", () => ({
+  useToastAction: () => ({
+    showToast: mockShowToast,
+    hideToast: mockHideToast,
+  }),
+  useToastState: () => ({
+    toasts: [],
+  }),
 }));
 
 export function mockUseToastAction() {
-  const showToast = jest.fn();
-  const hideToast = jest.fn();
-  jest.spyOn(Hooks, "useToastAction").mockImplementationOnce(() => ({
-    showToast,
-    hideToast,
-  }));
-  return { showToast, hideToast };
+  // Reset the mocks before each use
+  mockShowToast.mockClear();
+  mockHideToast.mockClear();
+
+  return { showToast: mockShowToast, hideToast: mockHideToast };
 }

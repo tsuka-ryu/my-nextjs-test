@@ -11,7 +11,7 @@ test("[role='button'][aria-disabled='true']", async () => {
   const screen = render(
     <AnchorButton href="#" disabled>
       test
-    </AnchorButton>
+    </AnchorButton>,
   );
   await expect
     .element(screen.getByRole("link"))

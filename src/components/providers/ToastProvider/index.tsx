@@ -1,12 +1,13 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Toast } from "./Toast";
 import {
   ToastActionContext,
-  ToastState,
+  type ToastState,
   ToastStateContext,
-  ToastStyle,
+  type ToastStyle,
 } from "./ToastContext";
 import { useToastProvider } from "./useToastProvider";
+
 export { useToastAction, useToastState } from "./hooks";
 export type { ToastState, ToastStyle };
 

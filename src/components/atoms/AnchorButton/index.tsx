@@ -11,7 +11,7 @@ type Props = {
 export const AnchorButton = forwardRef<HTMLAnchorElement, Props>(
   function AnchorButtonBase(
     { className, theme = "dark", variant = "medium", disabled, ...props },
-    ref
+    ref,
   ) {
     return (
       <a
@@ -23,5 +23,5 @@ export const AnchorButton = forwardRef<HTMLAnchorElement, Props>(
         data-variant={variant}
       />
     );
-  }
+  },
 );

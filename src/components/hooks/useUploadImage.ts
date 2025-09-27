@@ -1,16 +1,19 @@
-import { uploadImage, UploadImageData } from "@/services/client/UploadImage";
-import { ChangeEvent, useEffect, useState } from "react";
-import {
+import { type ChangeEvent, useEffect, useState } from "react";
+import type {
   FieldValues,
   Path,
   PathValue,
   UseFormRegister,
   UseFormSetValue,
 } from "react-hook-form";
+import {
+  type UploadImageData,
+  uploadImage,
+} from "@/services/client/UploadImage";
 
 export function handleChangeFile(
   onValid: (result: ProgressEvent<FileReader>, file: File) => void,
-  onInvalid?: (result: ProgressEvent<FileReader>, file: File) => void
+  onInvalid?: (result: ProgressEvent<FileReader>, file: File) => void,
 ) {
   return (event: ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files) return;

@@ -9,7 +9,7 @@ type Props = {
 
 export const Combobox = forwardRef<HTMLSelectElement, Props>(function Combobox(
   { className, theme = "dark", variant = "medium", ...props },
-  ref
+  ref,
 ) {
   return (
     <select

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { initialState, ToastState } from "./ToastContext";
+import { initialState, type ToastState } from "./ToastContext";
 
 export function useToastProvider(defaultState?: Partial<ToastState>) {
   const [{ isShown, message, style }, setState] = useState({
@@ -10,7 +10,7 @@ export function useToastProvider(defaultState?: Partial<ToastState>) {
     (props?: Partial<Omit<ToastState, "isShown">>) => {
       setState((prev) => ({ ...prev, ...props, isShown: true }));
     },
-    []
+    [],
   );
   const hideToast = useCallback(() => {
     setState((prev) => ({ ...prev, isShown: false }));

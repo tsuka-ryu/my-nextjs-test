@@ -1,5 +1,5 @@
-import { SelectFilterOption } from "@/components/molecules/SelectFilterOption";
 import { useRouter } from "next/router";
+import { SelectFilterOption } from "@/components/molecules/SelectFilterOption";
 import styles from "./styles.module.css";
 
 export const OrderBy = () => {

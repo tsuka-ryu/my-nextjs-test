@@ -6,7 +6,7 @@ type Props = React.ComponentPropsWithRef<"input">;
 
 export const Textbox = forwardRef<HTMLInputElement, Props>(function Textbox(
   { className, ...props },
-  ref
+  ref,
 ) {
   return (
     <input

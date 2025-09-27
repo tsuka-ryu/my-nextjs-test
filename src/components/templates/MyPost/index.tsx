@@ -1,7 +1,7 @@
 import { LinkButton } from "@/components/atoms/LinkButton";
 import { ContentHeader } from "@/components/molecules/ContentHeader";
 import { Markdown } from "@/components/organisms/Markdown";
-import { GetMyPostReturn } from "@/services/server/MyPost";
+import type { GetMyPostReturn } from "@/services/server/MyPost";
 import styles from "./styles.module.css";
 
 type Props = {

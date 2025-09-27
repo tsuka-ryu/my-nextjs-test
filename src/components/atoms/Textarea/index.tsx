@@ -13,5 +13,5 @@ export const Textarea = forwardRef<HTMLTextAreaElement, Props>(
         className={clsx(className, styles.module)}
       />
     );
-  }
+  },
 );

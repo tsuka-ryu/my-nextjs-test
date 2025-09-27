@@ -1,16 +1,16 @@
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  type FieldValues,
+  type SubmitErrorHandler,
+  type SubmitHandler,
+  useForm,
+} from "react-hook-form";
 import { PostFormFooter } from "@/components/molecules/PostFormFooter";
 import { PostFormHeroImage } from "@/components/molecules/PostFormHeroImage";
 import { PostFormInfo } from "@/components/molecules/PostFormInfo";
 import { TextareaWithInfo } from "@/components/molecules/TextareaWithInfo";
 import { createMyPostInputSchema } from "@/lib/schema/MyPosts";
-import { PostInput } from "@/pages/api/my/posts";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  FieldValues,
-  SubmitErrorHandler,
-  SubmitHandler,
-  useForm,
-} from "react-hook-form";
+import type { PostInput } from "@/pages/api/my/posts";
 import styles from "./styles.module.css";
 
 type Props<T extends FieldValues = PostInput> = {

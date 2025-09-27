@@ -1,7 +1,7 @@
-import { ReactNode, useCallback, useState } from "react";
+import { type ReactNode, useCallback, useState } from "react";
 import {
   AlertDialogActionContext,
-  AlertDialogState,
+  type AlertDialogState,
   AlertDialogStateContext,
   initialState,
 } from "./AlertDialogContext";
@@ -18,7 +18,7 @@ export const AlertDialogProvider = ({
     (props?: Partial<Omit<AlertDialogState, "isShown">>) => {
       setState((prev) => ({ ...prev, ...props, isShown: true }));
     },
-    []
+    [],
   );
   const hideAlertDialog = useCallback(() => {
     setState((prev) => ({ ...prev, isShown: false }));

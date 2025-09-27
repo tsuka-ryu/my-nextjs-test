@@ -8,7 +8,7 @@ type Props = {
 
 export const Switch = forwardRef<HTMLInputElement, Props>(function Switch(
   { className, checked, ...props },
-  ref
+  ref,
 ) {
   return (
     <span className={clsx(className, styles.module)}>

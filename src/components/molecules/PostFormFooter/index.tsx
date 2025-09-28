@@ -38,7 +38,7 @@ export const PostFormFooter = ({
 }: {
   control: Control<PutInput>;
   isSubmitting: boolean;
-  register: UseFormRegister<any>;
+  register: UseFormRegister<PutInput>;
   onClickSave: (isPublish: boolean) => void;
   onClickDelete?: () => void;
 }) => {

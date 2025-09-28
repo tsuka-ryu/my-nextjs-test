@@ -15,7 +15,7 @@ function TestComponent({ error }: { error?: string }) {
       setValue={setValue}
       name="imageUrl"
       error={error}
-    />
+    />,
   );
 }
 

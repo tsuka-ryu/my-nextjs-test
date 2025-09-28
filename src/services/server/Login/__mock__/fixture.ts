@@ -1,4 +1,4 @@
-import { PostLoginReturn } from "../";
+import type { PostLoginReturn } from "../";
 
 export const postLoginData: PostLoginReturn = {
   id: 1,

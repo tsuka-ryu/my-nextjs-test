@@ -1,7 +1,7 @@
-import { HttpError } from "@/lib/error";
-import * as ApiLogin from "@/pages/api/login";
 import { rest } from "msw";
-import { Input, path } from "..";
+import { HttpError } from "@/lib/error";
+import type * as ApiLogin from "@/pages/api/login";
+import { type Input, path } from "..";
 import { data } from "./fixture";
 
 export function handlePostLogin() {
@@ -14,7 +14,7 @@ export function handlePostLogin() {
         return res(ctx.status(err.status));
       }
       return res(ctx.json(data));
-    }
+    },
   );
 }
 

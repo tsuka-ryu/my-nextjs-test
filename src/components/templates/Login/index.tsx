@@ -1,4 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useId } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/atoms/Button";
 import { TextboxWithError } from "@/components/molecules/TextboxWithError";
@@ -12,6 +13,8 @@ const defaultValues: Input = {
 };
 
 export const Login = () => {
+  const emailId = useId();
+  const passwordId = useId();
   const { showToast } = useToastAction();
   const {
     register,
@@ -28,7 +31,7 @@ export const Login = () => {
         try {
           const data = await postLogin(values);
           window.location.href = data.redirectUrl;
-        } catch (err) {
+        } catch {
           showToast({ message: "ログインに失敗しました", style: "failed" });
         }
       })}
@@ -38,20 +41,20 @@ export const Login = () => {
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>ログイン</legend>
           <div className={styles.email}>
-            <label htmlFor="email">メールアドレス</label>
+            <label htmlFor={emailId}>メールアドレス</label>
             <TextboxWithError
               {...register("email")}
-              id="email"
+              id={emailId}
               type="text"
               placeholder="example@test.com"
               error={errors.email?.message}
             />
           </div>
           <div className={styles.password}>
-            <label htmlFor="password">パスワード</label>
+            <label htmlFor={passwordId}>パスワード</label>
             <TextboxWithError
               {...register("password")}
-              id="password"
+              id={passwordId}
               type="password"
               placeholder="8文字以上で入力"
               error={errors.password?.message}
